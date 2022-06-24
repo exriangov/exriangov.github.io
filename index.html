@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/985163155233722419/987978906604814336/5765F23A-ECC9-4B4B-9206-AC3AF5B3600F.png">
+    <title>Home - Sultanate of Exrio</title>
+</head>
+<body>
+    <section class="covid-redirect">
+        <div id="notification-icon-div">
+            <p>!</p>
+        </div>
+        <a href="https://discord.gg/YYwbMcHMKP" target="_blank">
+            <p class="beta t"></p>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/arrow-right-2872236-2388391.png" alt="">
+        </a>
+        <button onclick="closePopUp()">×</button>
+    </section>
+    <!--<section id="covid-redirect">
+        <div id="notification-icon-div">
+            <p>!</p>
+        </div>
+        <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">
+            <p>Learn more about COVID-19 and how to keep yourself safe</p>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/arrow-right-2872236-2388391.png" alt="">
+        </a>
+    </section>-->
+
+    <header>
+        <a id="title" href="index.html">
+            <img src="https://cdn.discordapp.com/attachments/982247097610952728/987618123421192252/IMG_9603.png" alt="">
+            <h1 class="title t"></h1>
+        </a>
+        <nav>
+            <div><a class="about t" href="about.html"></a></div>
+            <div><a class="legal t" href="legal.html"></a></div>
+            <div><a class="community t" href="community.html"></a></div>
+            <div><a class="education t" href="education.html"></a></div>
+            <div><a class="careers t" href="careers.html"></a></div>
+            <div><a class="diplomacy t" href="diplomacy.html"></a></div>
+        </nav>
+        <div id="languages">
+            <button class="language-btn" value="0" onclick="changeLanguage(value)">EN</button>
+            <button class="language-btn" value="1" onclick="changeLanguage(value)">AR</button>
+            <button class="language-btn" value="2" onclick="changeLanguage(value)">ES</button>
+            <button class="language-btn hidden" value="ex" onclick="changeLanguage(value)">EX</button>
+        </div>
+    </header>
+
+    <section id="splash">
+        <h1 class="welcome t"></h1>
+        <p class="welcome_msg t"></p>
+        <div>
+            <h2 class="quick_links t"></h2>
+            <a id="href-btn" href="https://discord.gg/YYwbMcHMKP" target="_blank">
+                <img id="discord-icon" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="">
+                <p>Discord</p>
+                <img class="arrow-1" src="https://icons-for-free.com/download-icon-arrows+chevron+direction+forward+next+right+icon-1320085938847587870_0.svg" alt="">
+            </a>
+            <a id="href-btn" href="https://micronations.wiki/wiki/Sultanate_of_Exrio" target="_blank">
+                <img id="discord-icon" src="data:image/png;base64,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" alt="">
+                <p>MicroWiki</p>
+                <img class="arrow-1" src="https://icons-for-free.com/download-icon-arrows+chevron+direction+forward+next+right+icon-1320085938847587870_0.svg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section id="main">
+        <a class="box" href="covid.html">
+            <img src="https://media.istockphoto.com/photos/coronavirus-new-strain-wide-dark-background-picture-id1308624310?b=1&k=20&m=1308624310&s=170667a&w=0&h=HyEGR3DtK8TD2_kqoryPPuBWexQnG_KK0KhHYtXvm-c=" alt="">
+            <div class="text-box">
+                <h3 class="covid_box_title t"></h3>
+                <p class="covid_box_desc t"></p>
+                <div class="box-href-btn" href="https://discord.gg/YYwbMcHMKP" target="_blank">
+                    <img class="arrow-1" src="https://cdn.iconscout.com/icon/free/png-256/arrow-right-2872236-2388391.png" alt="">
+                </div>
+            </div>
+        </a>
+        <a class="box" href="citizenship.html">
+            <img src="https://media.istockphoto.com/vectors/characters-holding-digital-devices-and-megaphone-call-to-sign-online-vector-id1310963952?k=20&m=1310963952&s=612x612&w=0&h=HCuzh9YjFMv5oTdeGf0L7n6149rudTr2T9DqD4o0SmQ=" alt="">
+            <div class="text-box">
+                <h3 class="citizenship_box_desc t"></h3>
+                <p class="citizenship_box_desc t"></p>
+                <div class="box-href-btn" href="https://discord.gg/YYwbMcHMKP" target="_blank">
+                    <img class="arrow-1" src="https://cdn.iconscout.com/icon/free/png-256/arrow-right-2872236-2388391.png" alt="">
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <div id="dd">
+        <div class="links">
+            <a href="https://discord.gg/YYwbMcHMKP" target="_blank">
+                <img src="https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-White-1024x780.png" alt="">
+                <p>https://discord.gg/YYwbMcHMKP</p>
+            </a>
+            <button href="#" onclick="copyToClipboard(this)">
+                <img src="https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-White-1024x780.png" alt="">
+                <p>ExrianGov#3076</p>
+            </button>
+            <button href="#" onclick="copyToClipboard(this)">
+                <img src="https://tannerite.com/wp-content/uploads/2020/07/black-envelope-png-icon-2.png" alt="">
+                <p>exriangov@gmail.com</p>
+            </button>
+        </div>
+        <div id="pages">
+
+        </div>
+        <p class="ack t"></p>
+    </div>
+
+    <script src="function.js"></script>
+    <script src="text.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+.covid-redirect {
+    height: 70px;
+    background-color: rgb(37, 37, 37);
+    border-bottom: 4px solid rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+}
+
+.covid-redirect button {
+    margin-left: auto;
+    margin-right: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.covid-redirect button:hover {
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+}
+
+.covid-redirect > a:hover > img {
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+
+.covid-redirect > a {
+    color: white;
+    font-weight: bold;
+    margin-left: 23px;
+    display: flex;
+    gap: 7px;
+}
+
+.covid-redirect > a:hover {
+    text-decoration: 1px underline;
+    cursor: pointer;
+}
+
+.covid-redirect > a > img {
+    width: 20px;
+    height: auto;
+    filter: invert();
+    transition: 0.2s;
+}
+
+#notification-icon-div {
+    width: 60px;
+    height: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#notification-icon-div p {
+    color: white;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    width: 23px;
+    text-align: center;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+    color: white;
+}
+
+#title img {
+    width: 70px;
+    height: 70px;
+    filter: invert();
+}
+
+#title h1 {
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+nav div a {
+    color: white;
+    font-size: 19px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav div::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s;
+}
+
+nav div:hover::after {
+    background-color: #bd35f3;
+}
+
+#splash {
+    height: 400px;
+    background-color: #008cb6;
+    background-image: url("https://cdn.britannica.com/44/102944-050-18D72EC5/Domes-mosque-Malaysia.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+#splash h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#splash > p {
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+#splash > div {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+#splash > div h2 {
+    font-size: 23px;
+}
+
+#href-btn {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 13px;
+    border-radius: 5px;
+    color: #004c64;
+}
+
+#href-btn:hover > .arrow-1 {
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+
+#discord-icon {
+    width: 23px;
+    height: auto;
+}
+
+.arrow-1 {
+    width: 20px;
+    height: auto;
+    filter: brightness(0);
+    transition: 0.2s;
+}
+
+#main {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.box {
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
+    overflow: hidden;
+    color: inherit;
+}
+
+.box > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.career-box {
+    width: 400px;
+}
+
+.bg {
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+
+.bg h3 {
+    color: white;
+    padding-left: 20px;
+}
+
+.text-box {
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.text-box p {
+    color: #666666;
+    margin-top: 10px;
+}
+
+.career-box > img {
+    height: 100px;
+}
+
+.career-box .text-box {
+    height: 140px;
+}
+
+.career-box .text-box p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.box-href-btn {
+    background-color: rgba(0, 108, 224, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    margin-top: auto;
+    transition: 0.2s;
+}
+
+.box:hover > div > div {
+    transform: translateX(6px);
+    transition: 0.2s;
+}
+
+.box-href-btn > img {
+    filter: invert(28%) sepia(57%) saturate(5633%) hue-rotate(200deg) brightness(96%) contrast(101%);
+}
+
+#dd {
+    background-color: black;
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.ack {
+    position: absolute;
+    right: 0;
+    width: 450px;
+    margin: 50px;
+}
+
+.small-splash {
+    height: 130px;
+    background-color: #008cb6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.small-splash h1, .small-splash p {
+    color: white;
+    padding-left: 80px;
+}
+
+.small-splash h1 { font-size: 40px; }
+.small-splash p { font-size: 17px; }
+
+main {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+}
+
+main a, main a:visited {
+    color: #0645AD;
+    font-size: 18px;
+}
+
+.info-section {
+    padding: 90px;
+}
+
+.info-section p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px;
+}
+
+.links a {
+    display: flex;
+    gap: 10px;
+}
+
+.links button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+}
+
+.links button:hover {
+    cursor: pointer;
+}
+
+.links button:nth-child(3) img {
+    filter: invert();
+}
+
+.links img {
+    width: auto;
+    height: 20px;
+}
+
+.links > * > :nth-child(2) {
+    color: white;
+    font-size: 17px;
+}
+
+#languages {
+    display: flex;
+    gap: 10px;
+}
+
+.language-btn {
+    border: 0;
+    outline: 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 5px;
+}
+
+.language-btn:hover {
+    cursor: pointer;
+}
+
+.rtl {
+    display: block;
+    direction: rtl
+}
+
+.move-up {
+    position: absolute;
+    left: 0;
+    transition: top 1s linear;
+    top: 100px;
+}
+
+#about-content {
+    display: flex;
+    gap: 30px;
+}
+
+#about-content > div:nth-child(2) > img {
+    width: auto;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.links > * {
+    position: relative;
+}
+
+.copied {
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+}
+
+.ack { color: white; }
